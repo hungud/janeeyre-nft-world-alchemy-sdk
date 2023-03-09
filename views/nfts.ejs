@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NFT Webpage</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5 mb-3">NFTs Owned By <%= address %></h1>
+      <% if(nfts.length > 0) { %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Contract Address</th>
+            <th scope="col">Token ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% nfts.forEach((nft, index) => { %>
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= nft.contract.address %></td>
+            <td><%= nft.tokenId %></td>
+            <td><%= nft.title || 'N/A' %></td>
+            <td><%= nft.description || 'N/A' %></td>
+            <td>
+              <% if (nft.media.length > 0) { %>
+              <img src="<%= nft.media[0].url %>" alt="<%= nft.title || 'N/A' %>" class="img-thumbnail" style="max-width: 150px;">
+              <% } else { %>
+              <span>No image available</span>
+              <% } %>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <div class="alert alert-info" role="alert">
+        No NFTs found for this address
+      </div>
+      <% } %>
+    </div>
+  </body>

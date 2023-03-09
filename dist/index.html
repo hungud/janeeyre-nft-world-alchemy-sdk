@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Janeeyre NFT World</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div class="container">
+      <h1>Janeeyre NFT World</h1>
+      <form action="/nfts" method="get">
+        <div class="form-group">
+          <label for="address">Enter an Ethereum address:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            name="address"
+            placeholder="0x123456789abcdef"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Get Your NFTs</button>
+      </form>
+    </div>
+  </body>
+</html>

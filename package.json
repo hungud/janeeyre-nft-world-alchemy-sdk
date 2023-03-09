@@ -1,8 +1,53 @@
 {
   "name": "janeeyre-nft-world-alchemy-sdk",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
-    "alchemy-sdk": "^2.6.0"
+    "alchemy-sdk": "^2.6.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "description": "Janeeyre NFT WORLD based on Alchemy SDK",
+  "main": "index.js",
+  "allowedHosts": "all",
+  "scripts": {
+    "start": "node index.js --port $PORT --host 0.0.0.0",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --stats-children"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungud/janeeyre-nft-world-alchemy-sdk.git"
+  },
+  "keywords": [
+    "NFT",
+    "NFT",
+    "WORLD",
+    "Alchemy",
+    "Alchemy",
+    "SDK"
+  ],
+  "author": "hungud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hungud/janeeyre-nft-world-alchemy-sdk/issues"
+  },
+  "homepage": "https://github.com/hungud/janeeyre-nft-world-alchemy-sdk/",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.5.0",
+    "babel-loader": "^9.1.2",
+    "chai": "^4.3.7",
+    "ejs-loader": "^0.5.0",
+    "gh-pages": "^5.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.5.0",
+    "mocha": "^10.2.0",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   }
 }
