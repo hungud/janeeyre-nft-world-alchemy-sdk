@@ -1,0 +1,8 @@
+{
+  "name": "janeeyre-nft-world-alchemy-sdk",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "alchemy-sdk": "^2.6.0"
+  }
+}
